@@ -1,6 +1,6 @@
-import { useDrag } from "react-dnd";
-import { IProject } from "../domain/project.types";
-import { DndItemType } from "./dnd.types";
+import { useDrag } from 'react-dnd';
+import { IProject } from '../domain/project.types';
+import { DndItemType } from './dnd.types';
 
 interface IProps {
   item: IProject;
@@ -22,7 +22,10 @@ export function DraggableItem(props: IProps) {
       key={`${props.item.id}-${props.item.name}`}
       style={{ opacity: isDragging ? 0.5 : 1 }}
     >
-      <div role="Handle" ref={drag}>
+      <div
+        role="Handle"
+        ref={drag}
+      >
         {props.item.name}
       </div>
     </li>

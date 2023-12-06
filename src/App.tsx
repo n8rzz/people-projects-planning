@@ -1,7 +1,7 @@
-import "./App.css";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-import { DropableContainer } from "./components/DropableContainer";
+import './App.css';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { DropableContainer } from './components/DropableContainer';
 
 function App() {
   return (

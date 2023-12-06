@@ -1,3 +1,3 @@
 export enum DndItemType {
-  Project = "Project",
+  Project = 'Project',
 }
