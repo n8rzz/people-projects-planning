@@ -1,9 +1,9 @@
-import { DraggableItem } from './DraggableItem';
-import { IProject } from '../domain/projects/project.types';
+import { DraggableItem } from '../draggable-item/DraggableItem';
+import { IProject } from '../../domain/projects/project.types';
 import { useDrop } from 'react-dnd';
-import { DndItemType } from './dnd.types';
+import { DndItemType } from '../shared/dnd.types';
 import clsx from 'clsx';
-import { ProjectBucket, projectBucketLabels } from '../domain/projects/project.constants';
+import { ProjectBucket, projectBucketLabels } from '../../domain/projects/project.constants';
 
 interface IProps {
   collection: ProjectBucket;

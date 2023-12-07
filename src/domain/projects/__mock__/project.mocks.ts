@@ -26,4 +26,28 @@ export const projectListMock: IProject[] = [
     name: 'Canvas Shaper',
     order: -1,
   },
+  {
+    bucket: ProjectBucket.NotScheduled,
+    id: '5',
+    name: 'PM V2',
+    order: -1,
+  },
+  {
+    bucket: ProjectBucket.NotScheduled,
+    id: '6',
+    name: 'Monday.com Integration',
+    order: -1,
+  },
+  {
+    bucket: ProjectBucket.NotScheduled,
+    id: '7',
+    name: 'Quickbooks Online Integration',
+    order: -1,
+  },
+  {
+    bucket: ProjectBucket.NotScheduled,
+    id: '8',
+    name: 'Bring Insights In-House',
+    order: -1,
+  },
 ];

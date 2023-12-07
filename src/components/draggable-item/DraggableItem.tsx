@@ -1,6 +1,8 @@
+import './DraggableItem.css';
+import clsx from 'clsx';
 import { useDrag } from 'react-dnd';
-import { IProject } from '../domain/projects/project.types';
-import { DndItemType } from './dnd.types';
+import { IProject } from '../../domain/projects/project.types';
+import { DndItemType } from '../shared/dnd.types';
 
 interface IProps {
   item: IProject;
@@ -22,6 +24,9 @@ export function DraggableItem(props: IProps) {
       style={{ opacity: isDragging ? 0.5 : 1 }}
     >
       <div
+        className={clsx({
+          ['projectItem']: true,
+        })}
         role="Handle"
         ref={drag}
       >

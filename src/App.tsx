@@ -1,7 +1,7 @@
 import './App.css';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import { DroppableContainer } from './components/DroppableContainer';
+import { DroppableContainer } from './components/droppable-container/DroppableContainer';
 import { IProject } from './domain/projects/project.types';
 import { ProjectBucket } from './domain/projects/project.constants';
 import { Dispatch, SetStateAction, useState } from 'react';
@@ -30,6 +30,10 @@ function App() {
   };
 
   const handleDrop = (project: IProject, destination: ProjectBucket) => {
+    if (project.bucket === destination) {
+      return;
+    }
+
     const addHandler = dropHandlerFactory[destination];
     const removeHandler = dropHandlerFactory[project.bucket];
 
