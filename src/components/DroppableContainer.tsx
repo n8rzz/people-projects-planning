@@ -1,23 +1,27 @@
 import { DraggableItem } from './DraggableItem';
-import { IProject } from '../domain/project.types';
+import { IProject } from '../domain/projects/project.types';
 import { useDrop } from 'react-dnd';
 import { DndItemType } from './dnd.types';
 import clsx from 'clsx';
+import { ProjectBucket, projectBucketLabels } from '../domain/projects/project.constants';
 
 interface IProps {
+  collection: ProjectBucket;
   items: IProject[];
-  title: string;
+  onDrop: (project: IProject, destination: ProjectBucket) => void;
 }
 
 export function DroppableContainer(props: IProps) {
   const [{ isOver }, drop] = useDrop(() => ({
-    // The type (or types) to accept - strings or symbols
     accept: DndItemType.Project,
     collect: (monitor) => ({
       isOver: monitor.isOver(),
       canDrop: monitor.canDrop(),
     }),
+    drop: (project: IProject) => props.onDrop(project, props.collection),
   }));
+
+  const title = projectBucketLabels[props.collection];
 
   return (
     <div
@@ -27,7 +31,7 @@ export function DroppableContainer(props: IProps) {
         ['mix-section_isHovered']: isOver,
       })}
     >
-      <h2>{props.title}</h2>
+      <h2>{title}</h2>
 
       <ul>
         {props.items.map((item) => (

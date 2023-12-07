@@ -1,5 +1,5 @@
 import { useDrag } from 'react-dnd';
-import { IProject } from '../domain/project.types';
+import { IProject } from '../domain/projects/project.types';
 import { DndItemType } from './dnd.types';
 
 interface IProps {
