@@ -7,6 +7,7 @@ import { ProjectBucket } from './domain/projects/project.constants';
 import { Dispatch, SetStateAction, useState } from 'react';
 import { projectListMock } from './domain/projects/__mock__/project.mocks';
 import { filterItemsByBucket } from './App.utils';
+import { EffortWorkflow } from './components/effort-workflow/EffortWorkflow';
 
 function App() {
   const [currentProjects, setCurrentProjects] = useState<IProject[]>(
@@ -55,7 +56,7 @@ function App() {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className="app">
+      <div className="projectBuckets">
         <DroppableContainer
           items={currentProjects}
           collection={ProjectBucket.Current}
@@ -77,6 +78,9 @@ function App() {
           onDrop={handleDrop}
         />
       </div>
+      <EffortWorkflow
+        buckets={[currentProjects, nextProjects, futureProjects, unScheduledProjects]}
+      />
     </DndProvider>
   );
 }

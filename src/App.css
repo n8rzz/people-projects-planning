@@ -19,7 +19,7 @@ h2 {
   padding: 2rem;
 }
 
-.app {
+.projectBuckets {
   display: flex;
 }
 
@@ -38,4 +38,10 @@ h2 {
   background-color: rgba(255, 187, 17, 0.1);
   border: 2px dashed orange;
   transition: background-color ease-in-out 200ms;
+}
+
+.effortWorkflow {
+  border: 1px solid greenyellow;
+  margin-top: 2em;
+  padding: 1em;
 }

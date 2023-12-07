@@ -9,13 +9,13 @@ export const projectListMock: IProject[] = [
     order: -1,
   },
   {
-    bucket: ProjectBucket.NotScheduled,
+    bucket: ProjectBucket.Next,
     id: '2',
     name: 'Path to Value',
     order: -1,
   },
   {
-    bucket: ProjectBucket.NotScheduled,
+    bucket: ProjectBucket.Next,
     id: '3',
     name: 'Financials Part 3',
     order: -1,
@@ -27,7 +27,7 @@ export const projectListMock: IProject[] = [
     order: -1,
   },
   {
-    bucket: ProjectBucket.NotScheduled,
+    bucket: ProjectBucket.Next,
     id: '5',
     name: 'PM V2',
     order: -1,
@@ -45,7 +45,7 @@ export const projectListMock: IProject[] = [
     order: -1,
   },
   {
-    bucket: ProjectBucket.NotScheduled,
+    bucket: ProjectBucket.Future,
     id: '8',
     name: 'Bring Insights In-House',
     order: -1,
