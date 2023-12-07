@@ -9,6 +9,12 @@ module.exports = {
     'plugin:react/recommended',
     'prettier',
   ],
+  settings: {
+    react: {
+      pragma: 'React',
+      version: 'detect',
+    },
+  },
   overrides: [
     {
       env: {

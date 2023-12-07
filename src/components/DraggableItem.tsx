@@ -9,8 +9,7 @@ interface IProps {
 export function DraggableItem(props: IProps) {
   const [{ isDragging }, drag, dragPreview] = useDrag(() => ({
     type: DndItemType.Project,
-    // The collect function utilizes a "monitor" instance (see the Overview for what this is)
-    // to pull important pieces of state from the DnD system.
+    item: { ...props.item },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),
